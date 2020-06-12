@@ -1,3 +1,4 @@
+# O(n) time, O(n) space
 def urlify(url, length):
     urlified_string = ""
     i = 0
