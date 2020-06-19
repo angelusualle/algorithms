@@ -1,4 +1,4 @@
-# run time complexity is O(n) where n is size of longest string
+# run time complexity is O(n) where n is size of shortest string
 # space complexity is O(1)
 def are_not_at_most_one_edit_away(str1, str2):
     errors = 0
@@ -22,9 +22,11 @@ def are_not_at_most_one_edit_away(str1, str2):
     while i < len(str1):
         errors += 1
         i += 1
+        if errors > 1:
+            return False
     while j < len(str2):
         errors += 1
         j += 1
-    if errors > 1:
-        return False
+        if errors > 1:
+            return False
     return True
