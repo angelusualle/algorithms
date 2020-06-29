@@ -38,7 +38,6 @@ def is_feasible(locs, K, dist):
             continue
         start += dist * 2
     if K == 0: # 1
-        print(dist)
         return True
     else:
         return False
