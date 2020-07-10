@@ -7,6 +7,7 @@ class Node():
         self.data = data
         self.next = None
 
+# O(N) time, O(1) space
 def remove_middle_node(node):
     if node.next is None:
         return
