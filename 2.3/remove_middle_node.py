@@ -8,6 +8,8 @@ class Node():
         self.next = None
 
 def remove_middle_node(node):
+    if node.next is None:
+        return
     while node.next.next is not None:
         node.data = node.next.data
         node = node.next
