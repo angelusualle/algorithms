@@ -9,6 +9,7 @@ class Three_Stacks():
         pos = self.pos_refs[stack_num]
         item = self.arr[pos]
         if item is not None:
+            self.arr[pos] = None
             self.pos_refs[stack_num] -= 3
         return item
     def push(self, stack_num, item):
