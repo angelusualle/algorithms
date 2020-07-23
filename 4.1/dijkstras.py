@@ -32,6 +32,8 @@ class Graph:
         ans = []
         ans.append(node2)
         next_node = dist_table[node2]['parent']
+        if next_node is None:
+            return None
         while next_node is not node1:
             ans.append(next_node)
             next_node = dist_table[next_node]['parent']
