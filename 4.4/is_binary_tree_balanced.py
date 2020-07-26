@@ -3,7 +3,7 @@ class Node():
         self.d = d
         self.right_child = None
         self.left_child = None
-
+# O(n)
 def is_binary_tree_balanced(root):
     if root is None:
         return True, 0
