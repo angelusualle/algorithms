@@ -1,3 +1,4 @@
+#O(n) complexity
 def get_build_order(deps):
     ans = []
     next_ones = [x for x in deps if len(deps[x]) == 0]
