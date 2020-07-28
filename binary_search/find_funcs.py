@@ -1,8 +1,8 @@
 def find_val(arr, val):
     low = 0
-    high = len(arr)
+    high = len(arr) - 1
     while low <= high:
-        mid = (high-low +1) // 2 + low
+        mid = (high +low) // 2
         if arr[mid] == val:
             return mid
         elif arr[mid] > val:
@@ -16,7 +16,7 @@ def find_last_in_series(arr, func):
     high = len(arr) - 1
     last_true = None
     while low <= high:
-        mid = (high-low + 1) // 2 + low
+        mid = (high + low) // 2
         res = func(arr[mid])
         if res:
             low = mid + 1

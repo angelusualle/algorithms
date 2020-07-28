@@ -23,11 +23,10 @@ class Graph:
         while len(q) > 0:
             (dist, _, node) = heapq.heappop(q)
             for i, child in enumerate(node.children):
-                if not child.visited:
-                    heapq.heappush(q, (dist + 1, i, child))
                 if dist_table[child]['distance'] > dist + 1:
                     dist_table[child]['distance'] = dist + 1
                     dist_table[child]['parent'] = node
+                    heapq.heappush(q, (dist + 1, i, child))
             node.visited = True
         ans = []
         ans.append(node2)
