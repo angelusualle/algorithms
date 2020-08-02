@@ -22,6 +22,29 @@ def is_feasible_mami(locs, K, dist):
             curr = locs[i]
     return ks >= K
 
+import math
+def place_k_elements_in_arr_pos_to_minimize_maximum_distance(locs, K, steps):
+    locs.sort()
+    low = 0
+    high = locs[-1] - locs[0]
+    res = float('inf')
+    for x in range(steps):
+        mid = (high + low) / 2.0
+        if is_feasible_mima_eles(locs, K, mid):
+            res = min(res, mid)
+            high = mid
+        else:
+            low = mid
+    return res
+        
+def is_feasible_mima_eles(locs, K, dist):
+    num_new_stations = 0
+    for i in range(len(locs) - 1):
+        # For each gas, calculate how many new stations to be added according
+        # to the given distance
+        num_new_stations += (math.ceil((locs[i + 1] - locs[i]) / dist) - 1)
+    return num_new_stations <= K
+
 def get_minimized_maximum_distance(arr, K, precision = 1e-6):
     arr.sort()
     low = 0
