@@ -40,8 +40,6 @@ def place_k_elements_in_arr_pos_to_minimize_maximum_distance(locs, K, steps):
 def is_feasible_mima_eles(locs, K, dist):
     num_new_stations = 0
     for i in range(len(locs) - 1):
-        # For each gas, calculate how many new stations to be added according
-        # to the given distance
         num_new_stations += (math.ceil((locs[i + 1] - locs[i]) / dist) - 1)
     return num_new_stations <= K
 
