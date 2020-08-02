@@ -4,7 +4,6 @@ def place_k_elements_to_maximize_minimum_distance(locs, K, steps):
     low = 0
     high = locs[-1] - locs[0]
     res = -1
-    print(steps)
     for x in range(steps):
         mid = (high - low) / 2.0
         if is_feasible(locs, K, mid):
