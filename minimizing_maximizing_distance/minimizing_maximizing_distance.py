@@ -1,5 +1,5 @@
 # O(nlog(n))
-def place_k_elements_to_maximize_minimum_distance(locs, K, steps):
+def place_k_elements_in_arr_pos_to_maximize_minimum_distance(locs, K, steps):
     locs.sort()
     low = 0
     high = locs[-1] - locs[0]
