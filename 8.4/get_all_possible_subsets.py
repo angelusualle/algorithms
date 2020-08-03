@@ -7,7 +7,6 @@ def get_all_possible_subsets(nums):
         return [s]
     new_num = nums.pop()
     possibilites = get_all_possible_subsets(nums)
-    print(possibilites)
     new_possibilities = deepcopy(possibilites)
     for pos in new_possibilities:
         pos.add(new_num)
