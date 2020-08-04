@@ -1,8 +1,9 @@
 def heap_permutation(arr, size, n, ans): 
     if (size == 1): 
-        ans.append(arr)
+        ans.append(arr[:])
+        return
     for i in range(size): 
-        heap_permutation(arr[:],size-1,n, ans)
+        heap_permutation(arr,size-1,n, ans)
         if size % 2: 
             arr[0], arr[size-1] = arr[size-1], arr[0] 
         else: 
