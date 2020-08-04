@@ -3,6 +3,8 @@ def paint_fill(arr, point, new_color, old_color = None):
         return
     if old_color is None:
         old_color = arr[point[0]][point[1]]
+        if old_color == new_color:
+            return None
     if arr[point[0]][point[1]] == old_color:
         arr[point[0]][point[1]] = new_color
         paint_fill(arr, (point[0] + 1, point[1]), new_color, old_color)
