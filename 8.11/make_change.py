@@ -1,4 +1,3 @@
-# O(n) time and space
 def make_change(amount, denoms=[25,10,5,1], index=0, cache={}):
     if amount in cache and index in cache[amount]:
         return cache[amount][index]
