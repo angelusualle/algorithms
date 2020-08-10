@@ -1,3 +1,4 @@
+# O(n)
 def find_in_sorted_matrix(matrix, val):
     i = 0
     j = len(matrix[0]) - 1
