@@ -27,4 +27,4 @@ for epoch in range(100):
     weights_1_O -= lr*layer_1.T.dot(layer_2_delta)
     weights_X_1 -= lr*data.T.dot(layer_1_delta)
 
-    print("Epoch %i, loss (mse): %f" % (epoch+1, np.sum((layer_2 - ans)**2)))
+    print("Epoch %i, loss (mse): %f, mae: %f" % (epoch+1, 0.5*np.sum((layer_2 - ans)**2)/3.0, np.sum(np.abs(layer_2 - ans))))
