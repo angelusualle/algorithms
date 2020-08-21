@@ -2,11 +2,13 @@ import numpy as np
 
 data = np.array([[1,1,2],
         [3,4,5],
-        [6,7,8]])
+        [6,7,8],
+        [9,10,11],
+        [1,1,1,]])
 
-ans = np.array([[4,12,21]]).T
+ans = np.array([[4,12,21, 20, 3]]).T
 
-hidden_nodes = 1000
+hidden_nodes = 20
 lr = .01
 
 def relu(x):
