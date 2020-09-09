@@ -3,6 +3,9 @@ def int_to_english(num):
     ans = ''
     if num > 999.999999e9:
         raise Exception('Error: too big')
+    if num < 0:
+        ans += 'negative '
+        num *= -1
     tri_places = {9: 'billion', 6: 'million', 3: 'thousand'}
     tens_places = {9: 'ninety', 8: 'eighty',  7: 'seventy', 6: 'sixty', 5: 'fifty', 4: 'fourty', 3: 'thirty', 2: 'twenty'}
     teens_places = {19: 'nineteen', 18: 'eighteen', 17: 'seventeen', 16: 'sixteen', 15: 'fifteen', 14: 'fourteen', 13: 'thirteen', 12: 'twelve', 11: 'eleven', 10: 'ten'}
