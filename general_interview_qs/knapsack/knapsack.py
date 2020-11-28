@@ -16,10 +16,6 @@ class Knapsack():
                 init_config += str(val) + ' '
                 init_config_score += val
                 init_weight += weights[i]
-        print(init_config)
-        print(init_config_score)
-        print(init_weight)
-        print()
         self.best_score = init_config_score
         self.best_config_weight = init_weight
         self.best_config= init_config        
