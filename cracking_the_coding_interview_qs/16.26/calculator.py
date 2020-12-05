@@ -49,6 +49,4 @@ def get_operands(eq, operator_pos, down= True):
         op2.append(eq[op2i])
         op2i += 1
     op2 = ''.join(op2)
-    print(op1)
-    print(op2)
     return op1, op2
