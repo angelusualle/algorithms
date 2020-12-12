@@ -17,6 +17,6 @@ def count_2s_in_range(num, i):
     if z < 2:
         return round_down / 10
     elif z == 2:
-        return round_down / 10
+        return round_down / 10 + right + 1
     else:
         return roundup / 10
