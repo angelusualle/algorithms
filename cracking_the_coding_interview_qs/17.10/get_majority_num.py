@@ -13,6 +13,3 @@ def get_majority_num(nums):
         if z == n:
             n_cnt += 1
     return n if n > len(nums) / 2 else -1
-    
-        
-        
