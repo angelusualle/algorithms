@@ -21,7 +21,7 @@ class Trie():
                     next_one.children[let] = Trie.Node()
                 next_one = next_one.children[let]
             next_one.term = True
-
+# O(b^2 + kt) where b is length of longer string and kt is longest substring * size of substrings
 def check_substrings_in_long_string(long, substrings):
     trie = Trie(substrings)
     ans = set()
