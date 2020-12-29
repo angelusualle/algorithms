@@ -1,6 +1,6 @@
 import heapq
 
-# O(L*log(S))
+# O(L*log(S)) runtime
 def get_shortest_subsequence(short, long):
     refs = {x:[] for x in short}
     i = len(long) - 1
