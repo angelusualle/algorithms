@@ -21,6 +21,7 @@ def word_transform(w1, w2, dictionary):
             for i in range(len(word)):
                 if w[i] != word[i]:
                     diff += 1
+            diff += abs(len(word) - len(w))
             if diff == 1:
                 if w not in nodes_dict:
                     nodes_dict[w] = Node(w)
