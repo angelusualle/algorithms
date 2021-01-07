@@ -1,5 +1,5 @@
 from collections import defaultdict
-
+# O(DW + PW)
 def sparse_similarity(doc_words):
     word_doc = defaultdict(set)
     for k in doc_words:
