@@ -1,3 +1,4 @@
+# O(N!*N^2*S^2) very brute force
 def word_rectangle(words):
     words_set = set(words)
     re_orderings = []
