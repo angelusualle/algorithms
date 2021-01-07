@@ -86,18 +86,16 @@ class AVL_Tree():
                 iterator.parent = ol
                 ol.right_child = iterator
             else:
-                # left rotation
                 old_right_child = iterator.right_child
+                if iterator.right_child.left_child is not None:
+                    iterator.right_child = iterator.right_child.left_child
+                    iterator.right_child.parent = iterator
 
-                iterator.right_child = iterator.right_child.left_child
-                iterator.right_child.parent = iterator
-
-                old_right_child.parent = iterator.right_child
-                iterator.right_child.right_child  = old_right_child
-
-                old_left_child.left_child = iterator.left_child.left_child
-                old_left_child.left_child.parent = old_right_child
-                    
+                    old_right_child.parent = iterator.right_child
+                    old_right_child.left_child = iterator.right_child.right_child
+                    if old_right_child.left_child is not None:
+                        old_right_child.left_child.parent = old_right_child
+                    iterator.right_child.right_child  = old_right_child
                 # right rotation
                 if iterator.parent is not None and iterator.parent.right_child == iterator:
                     iterator.parent.right_child = iterator.right_child
@@ -107,11 +105,14 @@ class AVL_Tree():
                     iterator.right_child.parent = iterator.parent
                 else:
                     iterator.right_child.parent = None
+                    self.head = iterator.right_child
+                ol =  iterator.right_child
                 iterator.right_child = iterator.right_child.left_child
-                iterator.right_child.parent = iterator              
-                
-                iterator.parent = iterator.right_child
-                itereator.parent.left_child = iterator
+                if iterator.right_child is not None:
+                    iterator.right_child.parent = iterator              
+
+                iterator.parent = ol
+                ol.left_child = iterator
             self.propogate_heights(iterator)
 
 
