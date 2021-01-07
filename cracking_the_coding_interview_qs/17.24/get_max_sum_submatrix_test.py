@@ -7,4 +7,4 @@ class Test_Case_Get_Max_Sum_Submatrix(unittest.TestCase):
             [9, -8, 1, 3, 2],
             [-3, 7, 6, -2, 4], 
             [6, -4, -4, 8, -7] 
-        ]), (19, 0, 4))
+        ]), (19, 0, 0, 1, 4))
