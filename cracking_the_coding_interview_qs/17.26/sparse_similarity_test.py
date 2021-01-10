@@ -10,6 +10,7 @@ class Test_Case_Sparse_Similarity(unittest.TestCase):
                 'ID3': {8, 9, 10 , 11, 23},
                 'ID4': {67, 34, 52, 699, 800},
             }), ['ID1 to ID2 : 0.300000', 'ID2 to ID3 : 0.500000', 'ID2 to ID1 : 0.300000', 'ID3 to ID2 : 0.500000'])
+            #should be
 
 if __name__ == '__main__':
     unittest.main()
