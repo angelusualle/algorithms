@@ -131,4 +131,9 @@ dmypy.json
 # MacOS
 .DS_Store
 
-.vscode/
+
+*dSym/
+*.exe
+grokking_algorithms/*
+!*.cpp
+!*.h
