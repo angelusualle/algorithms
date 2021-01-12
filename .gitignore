@@ -133,7 +133,6 @@ dmypy.json
 
 
 *dSym/
-*.exe
-grokking_algorithms/*
-!*.cpp
-!*.h
+grokking_algorithms/cpp/*
+!grokking_algorithms/cpp/*.cpp
+!grokking_algorithms/cpp/*.h
