@@ -2,12 +2,12 @@
 #include "ChapterOneTest.h"
 #include <iostream>
 
-using namespace std;
+using std::string;
+using std::cout;
 
 int main( ) {
    ChapterOneTest test;
-   std::string s;
    test.runTest();
-   printf("SUCCESS!\n");
+   printf("Success!\n");
    return 0;
 }
