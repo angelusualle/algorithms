@@ -1,6 +1,6 @@
+#pragma once
 #include "UnitTest.h"
 #include "ChapterOne.h"
-#include <string.h>
 
 class ChapterOneTest : public UnitTest {
  public:

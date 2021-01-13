@@ -1,3 +1,4 @@
+#pragma once
 #define UT_ASSERT( condition ) \
         assertTrue(condition,__FILE__,__LINE__,#condition)
 
