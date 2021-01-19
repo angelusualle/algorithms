@@ -1,12 +1,11 @@
-#include <map>
-#include <string>
+#include "ChapterFive.h"
 
 using namespace std;
 
-map<char,int> get_char_counts(string str){
-    map<char, int> mapper;
+unordered_map<char,int> get_char_counts(string str){
+    unordered_map<char, int> mapper;
     for (int i = 0; i < str.size(); ++i){
-        map<char,int>::iterator it = mapper.find(str[i]);
+        unordered_map<char,int>::iterator it = mapper.find(str[i]);
         if (it == mapper.end()){
             mapper[str[i]] = 1;
         }
