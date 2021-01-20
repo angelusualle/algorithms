@@ -11,6 +11,8 @@
         "__string": "cpp",
         "__tree": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "unordered_set": "cpp",
+        "iosfwd": "cpp"
     }
 }
