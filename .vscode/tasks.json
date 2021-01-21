@@ -8,7 +8,8 @@
                 "-g",
                 "grokking_algorithms/cpp/*.cpp",
                 "-o",
-                "grokking_algorithms/cpp/TestRunner"
+                "grokking_algorithms/cpp/TestRunner",
+                "-std=c++11"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

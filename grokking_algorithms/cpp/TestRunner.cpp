@@ -5,6 +5,7 @@
 #include "ChapterFourTest.h"
 #include "ChapterFiveTest.h"
 #include "ChapterSixTest.h"
+#include "ChapterSevenTest.h"
 
 int main( ) {
    ChapterOneTest test;
@@ -24,6 +25,9 @@ int main( ) {
 
    ChapterSixTest test6;
    test6.runTest();
+
+   ChapterSevenTest test7;
+   test7.runTest();
    printf("Success!\n");
    return 0;
 }
