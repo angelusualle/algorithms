@@ -1,3 +1,4 @@
+# O(N) time and O(N) space
 def two_sum(nums, target):
     diffs = {}
     for i,n in enumerate(nums):

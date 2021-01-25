@@ -3,6 +3,7 @@
 
 using std::unordered_map;
 
+// O(N) time and O(N) space
 vector<int> twoSum(vector<int> nums, int target){
     unordered_map<int, int> diffs;
     for (int i = 0; i < nums.size(); i++){
