@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "clang++ - Build and debug unit cpp folder",
+        "name": "clang++ - Build and debug unit cpp folder (grokking_algorithms)",
         "type": "cppdbg",
         "request": "launch",
         "program": "${workspaceFolder}/grokking_algorithms/cpp/TestRunner",
@@ -13,7 +13,18 @@
         "cwd": "${workspaceFolder}",
         "environment": [],
         "MIMode": "lldb",
-        "preLaunchTask": "clang++ build cpp directory"
+        "preLaunchTask": "clang++ build cpp directory (grokking_algorithms)"
+      },
+      {
+        "name": "clang++ - Build and debug unit cpp folder (leetcode)",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/leetcode/cpp/TestRunner",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "MIMode": "lldb",
+        "preLaunchTask": "clang++ build cpp directory (leetcode)"
       }
     ]
   }

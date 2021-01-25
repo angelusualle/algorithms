@@ -136,3 +136,7 @@ dmypy.json
 grokking_algorithms/cpp/*
 !grokking_algorithms/cpp/*.cpp
 !grokking_algorithms/cpp/*.h
+
+leetcode/cpp/*
+!leetcode/cpp/*.cpp
+!leetcode/cpp/*.h
