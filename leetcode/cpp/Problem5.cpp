@@ -1,5 +1,5 @@
 #include "Problem5.h"
-
+// O(N^2) where n is number of chars in string
 string getLongestPalindrome(string s){
         int bestStartIndex = 0;
         int bestEndIndex = 0;
