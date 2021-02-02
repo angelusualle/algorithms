@@ -1,5 +1,5 @@
 #include "Problem6.h"
-
+// O(N) where n is length of string
 string convert(string s, int numRows){
     if (numRows == 1){
         return s;
