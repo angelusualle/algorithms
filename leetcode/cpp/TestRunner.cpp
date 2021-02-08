@@ -8,6 +8,7 @@
 #include "Problem7Test.h"
 #include "Problem8Test.h"
 #include "Problem9Test.h"
+#include "Problem10Test.h"
 
 int main(){
     Problem1Test prob1;
@@ -36,6 +37,9 @@ int main(){
 
     Problem9Test prob9;
     prob9.runTest();
+
+    Problem10Test prob10;
+    prob10.runTest();
 
     printf("Success!");
 }
