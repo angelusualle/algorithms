@@ -1,5 +1,6 @@
 #include "Problem13.h"
 
+// O(N) where n is number of chars in string
 int romanToInt(string s){
     int num = 0;
     for (int i = 0; i < s.size();){
