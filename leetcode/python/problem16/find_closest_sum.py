@@ -1,3 +1,4 @@
+# O(N^2) where n is num of nums
 def find_closest_sum(nums, target):
     answer = None
     nums.sort()

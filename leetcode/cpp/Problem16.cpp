@@ -3,6 +3,7 @@
 
 using std::sort;
 
+// O(N^2) where n is num of nums
 int find_closest_sum(vector<int>& nums, int target){
     sort(nums.begin(), nums.end());
     int answer = 0;
