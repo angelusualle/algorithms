@@ -1,5 +1,6 @@
 #include "Problem21.h"
 
+// O(N+M) where n and m are sizes of lists
 ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
     if (l1 == nullptr){
         return l2;
