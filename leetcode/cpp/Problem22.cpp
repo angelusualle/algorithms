@@ -1,6 +1,6 @@
 #include "Problem22.h"
 
-
+// O(4^n/sqrt(n)) where n is num of parenthesis
 vector<string> generateParenthesis(int n) {
     vector<string> answer;
     genPar("", 0, n*2, answer);
