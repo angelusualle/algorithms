@@ -1,3 +1,4 @@
+# O(V+E) overall
 def ccdfs(graph):
    v = {k:(-1, False) for k in graph.keys()}
    cc = 0
