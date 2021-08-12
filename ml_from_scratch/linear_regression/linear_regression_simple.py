@@ -1,30 +1,31 @@
 import numpy as np
-import random
-import matplotlib.pyplot as plt
 
-x = np.arange(100)
-delta = np.random.uniform(-1, 10, 100)
-y = 3*x + 10 + delta
+coefficients = np.random.random((5,1))
+bias = np.random.random(1)
+input_vals = np.random.random((1000, 5))
+output = np.dot(input_vals, coefficients)+ bias
 
-plt.plot(x,y, label="Original")
+def mse(estimate, true):
+    return sum((estimate - true)**2) / len(estimate)
 
-weight = random.random()
-bias = 10
-yhat = weight*x + bias
+assert mse(output, output) == 0
 
-plt.plot(x, yhat, label="Untrained Projection")
+estimated_coefficients = np.random.random((5, 1))
+estimated_bias = np.random.random(1)
 
+output_estimated = np.dot(input_vals, estimated_coefficients) + bias
 
-def gradient_descent(weight, bias, x, y, lr=0.000001):
-    # weight:
-    weight_gradient = -x*(y - weight*x-bias)
-    bias_gradient = -(y-weight*x-bias)
-    return weight-lr*np.sum(weight_gradient), bias-lr*np.sum(bias_gradient)
-epochs = 10
-for i in range(epochs):
-    weight, bias = gradient_descent(weight, bias, x, y)
-    yhat_1_epoch = weight*x + bias
-    plt.plot(x, yhat_1_epoch, label="%i epoch training " % (i+1))
+mse_ = mse(output_estimated, output)
 
-plt.legend()
-plt.show()
+learning_rate = 0.01
+
+while mse_ > 0.00001:
+    estimated_coefficients -= (learning_rate*sum((output_estimated - output) * input_vals)/ len(output) * 2).reshape((5,1))
+    bias -= (learning_rate*sum(output_estimated - output)/ len(output) * 2)
+    output_estimated = np.dot(input_vals, estimated_coefficients) + bias
+
+    mse_ = mse(output_estimated, output)
+    print(mse_)
+
+print(coefficients)
+print(estimated_coefficients)
